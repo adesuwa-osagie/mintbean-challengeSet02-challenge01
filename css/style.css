@@ -1,3 +1,7 @@
+@import url(//db.onlinewebfonts.com/c/fab8fb009e26281572e811051fe28b80?family=Futura+Display+BQ);
+@import url(//db.onlinewebfonts.com/c/9882baf89f6a50439487112cbd8a91dd?family=UA+Cadet);
+@import url(//db.onlinewebfonts.com/c/f4221c695de0fe4bd63bf82813b53175?family=MS+Gothic);
+
 * {
     margin: 0;
     padding: 0;
@@ -9,8 +13,8 @@ html {
 }
 
 .header {
-    background-image: linear-gradient(6deg, rgba(23, 21, 143, 0.897), rgba(255, 255, 255, 0) 70% ),
-    url("/images/boku-no-hero-academia.jpg");
+     /* background-image: linear-gradient(6deg, rgba(23, 21, 143, 0.897), rgba(255, 255, 255, 0) 70% ),
+    url("/images/boku-no-hero-academia.jpg");*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
