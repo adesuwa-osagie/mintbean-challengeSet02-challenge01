@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+.header {
+    background-image: linear-gradient(6deg, rgba(23, 21, 143, 0.897), rgba(255, 255, 255, 0) 70% ),
+    url(/images/boku-no-hero-academia.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    animation: fade-background 5s;
+}
+
+@keyframes fade-background {
+    0% { 
+        opacity: 0.1; 
+    }
+    100% {   
+        opacity: 1; 
+    }
+}
+
+/* MOBILE VIEW */
+.nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 2;
+
+    background-color: rgba(112, 128, 144, 0.349);
+    box-shadow: 0px 3px 2px rgb(64, 67, 70);
+}
+
+.nav_links {
+    display: none;
+}
+
+.logo {
+    margin-left: 2rem;
+    width: 180px;
+    height: 80px;
+}
+.menu {
+    font-size: 4rem;
+    margin-right: 10px;
+    text-decoration: none;
+    color: rgb(23, 21, 143);
+}
+
+.hero {
+    height: 250vh;
+    position: relative;
+
+}
+
+.card {
+    position: absolute;
+    top: 8%;
+    margin-left: 6.2%;
+    max-width: 280px;
+    max-height: 440px;
+    padding: 1.8rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    border: 3px solid rgb(55, 95, 134);
+    border-radius: 4px;
+
+    background-color: rgba(112, 128, 144, 0.349);
+    box-shadow: 4px 4px 5px rgb(64, 67, 70);
+
+    /* Resource: https://codepen.io/hillse/pen/VWjEMy */
+    animation: fadeIn 1s linear;
+}
+
+@keyframes fadeIn{
+    0% {
+        transform:translateX(-100%); 
+        opacity: 0.1;  
+        }
+    100% { 
+        transform:translateX(0%); 
+        opacity: 1; 
+        }
+}
+
+.card_title {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-family: "Futura Display BQ", sans-serif;
+    letter-spacing: 3px;
+    color: white;
+    background: red;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
+.card_text {
+    margin-top: 10px;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-family: "MS Gothic", sans-serif;
+    
+    color: rgb(255, 255, 255);
+}
+
+.ua_letter {
+    font-family: "UA Cadet", sans-serif;
+    font-size: 4rem;
+    
+}
+
+.button {
+    margin-top: 15px;
+    background-color: rgb(34, 32, 158);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.5rem;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: 0.5s ease-out, opacity 0.8s ease;
+}
+
+.button:hover::before {
+    content: "PLUS ULTRA";
+    font-weight: 800;
+}
+.button:hover {
+    background-color: #e7bf1e;
+
+}
+
+.button:hover .learn {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+/* NAVBAR SECTION */
+.nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 2;
+
+    background-color: rgba(112, 128, 144, 0.349);
+    box-shadow: 0px 3px 2px rgb(64, 67, 70);
+}
+
+.logo {
+    margin-left: 2rem;
+    width: 180px;
+    height: 80px;
+}
+
+.menu {
+    display: none;
+}
+
+.nav_links {
+    width: 45%;
+    margin-right:50px;
+    margin-top: 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 4rem;
+    font-family: "Futura Display BQ", sans-serif;
+    -webkit-text-stroke: 0.7px white;
+    letter-spacing: 2px;
+}
+
+.nav_links li {
+
+    overflow: hidden;
+    transition: color 0.8s ease;
+    background: linear-gradient(to right, rgb(23, 21, 143) 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: 0.43s ease-out, opacity 0.8s ease;
+}
+
+.nav_links li:hover {
+    background-position: left bottom;
+    color: white;
+    opacity: 0.897;
+    -webkit-text-stroke: 0.7px black;
+}
+
+
+
+.nav_ua_letter{
+    font-family: "UA Cadet", sans-serif;
+    font-size: 3.54rem;
+    
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+}
+
+.card {
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    margin-left: 5%;
+    max-width: 800px;
+    max-height: 600px;
+    border: 3px solid rgb(55, 95, 134);
+    border-radius: 4px;
+    padding: 3rem;
+    background-color: rgba(112, 128, 144, 0.349);
+    box-shadow: 4px 4px 5px rgb(64, 67, 70);
+
+}
+
+.card_title {
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    font-family: "Futura Display BQ", sans-serif;
+    letter-spacing: 3px;
+    color: white;
+    background: red;
+    padding: 10px;
+
+}
+
+.ua_letter {
+    font-family: "UA Cadet", sans-serif;
+    font-size: 4.9rem;
+    
+}
+
+.card_text {
+    margin-top: 15px;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-family: "MS Gothic", sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+}
+

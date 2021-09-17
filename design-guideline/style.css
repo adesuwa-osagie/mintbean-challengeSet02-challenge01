@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #232932;
+    --gray: #3A3F47;
+    --white: #FFF;
+    --yellow: #FFD36A;
+}
+
