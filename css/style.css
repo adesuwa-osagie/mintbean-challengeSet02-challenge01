@@ -3,9 +3,13 @@
 @font-face {font-family: "MS Gothic"; src: url("//db.onlinewebfonts.com/t/f4221c695de0fe4bd63bf82813b53175.eot"); src: url("//db.onlinewebfonts.com/t/f4221c695de0fe4bd63bf82813b53175.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f4221c695de0fe4bd63bf82813b53175.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f4221c695de0fe4bd63bf82813b53175.woff") format("woff"), url("//db.onlinewebfonts.com/t/f4221c695de0fe4bd63bf82813b53175.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f4221c695de0fe4bd63bf82813b53175.svg#MS Gothic") format("svg"); }
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --blue: rgb(23, 21, 143);
 }
 
 html {
@@ -13,16 +17,16 @@ html {
 }
 
 .header {
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(6deg, rgba(23, 21, 143, 0.897), rgba(255, 255, 255, 0) 70% ),
     url("../images/boku-no-hero-academia.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
     background-position: center;
-    height: 100%;
-    width: 100%;
-    animation: fade-background 5s;
+    background-size: cover;
+    /* animation: fade-background 5s; */
 }
 
 @keyframes fade-background {
@@ -37,13 +41,12 @@ html {
 /* MOBILE VIEW */
 .nav {
     position: absolute;
-    width: 100%;
+    z-index: 2;
     display: flex;
+    width: 100%;
+    padding: 1rem;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    z-index: 2;
-
     background-color: rgba(112, 128, 144, 0.349);
     box-shadow: 0px 3px 2px rgb(64, 67, 70);
 }
@@ -53,9 +56,9 @@ html {
 }
 
 .logo {
-    margin-left: 2rem;
     width: 160px;
     height: 60px;
+    margin-left: 2rem;
 }
 
 .container {
@@ -63,37 +66,34 @@ html {
 }
 
 .menu {
-    font-size: 4rem;
-    margin-right: 10px;
-    text-decoration: none;
-    color: rgb(23, 21, 143);
     float: right;
+    margin-right: 10px;
+    font-size: 4rem;
+    color: var(--blue);
+    text-decoration: none;
 }
 
 .hero {
-    height: 250vh;
     position: relative;
+    height: 250vh;
 
 }
 
 .card {
     position: absolute;
     top: 8%;
-    margin-left: 6.2%;
+    display: flex;
     max-width: 280px;
     max-height: 440px;
     padding: 1.8rem;
-
-    display: flex;
+    margin-left: 6.2%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+    background-color: rgba(112, 128, 144, 0.349);
     border: 3px solid rgb(55, 95, 134);
     border-radius: 4px;
-
-    background-color: rgba(112, 128, 144, 0.349);
     box-shadow: 4px 4px 5px rgb(64, 67, 70);
 
     /* Resource: https://codepen.io/hillse/pen/VWjEMy */
@@ -112,55 +112,52 @@ html {
 }
 
 .card_title {
-    font-size: 4.5rem;
-    text-transform: uppercase;
-    font-family: 'Futura Display BQ', sans-serif;
-    letter-spacing: 3px;
-    color: white;
-    background: red;
     padding: 10px;
     margin-bottom: 10px;
-
+    font-family: 'Futura Display BQ', sans-serif;
+    font-size: 4.5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: red;
 }
 
 .card_text {
     margin-top: 10px;
-    font-size: 2rem;
     margin-bottom: 15px;
     font-family: "MS Gothic", sans-serif;
-    
-    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    color: white;
 }
 
 .ua_letter {
     font-family: "UA Cadet", sans-serif;
     font-size: 4rem;
-    
 }
 
 .button {
+    display: inline-block;
+    padding: 15px 32px;
     margin-top: 15px;
-    background-color: rgb(34, 32, 158);
+    background-color: var(--blue);
     border: none;
     border-radius: 20px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 2.5rem;
     font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    text-align: center;
     cursor: pointer;
-    transition: 0.5s ease-out, opacity 0.8s ease;
+    transition: 500ms ease-out, opacity 800ms ease;
 }
 
 .button:hover::before {
     content: "PLUS ULTRA";
     font-weight: 800;
 }
+
 .button:hover {
     background-color: #e7bf1e;
-
 }
 
 .button:hover .learn {
@@ -171,23 +168,22 @@ html {
 /* NAVBAR SECTION */
 .nav {
     position: absolute;
-    width: 100%;
+    z-index: 2;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
     padding: 0.40rem;
     padding-top: 1.2rem;
     padding-bottom: 1.4rem;
-    z-index: 2;
-
+    justify-content: space-between;
+    align-items: center;
     background-color: rgba(112, 128, 144, 0.349);
     box-shadow: 0px 3px 2px rgb(64, 67, 70);
 }
 
 .logo {
-    margin-left: 2rem;
     width: 165px;
     height: 65px;
+    margin-left: 2rem;
 }
 
 .menu {
@@ -195,71 +191,67 @@ html {
 }
 
 .nav_links {
-    width: 55vw;
-    float: right;
-    margin-right:50px;
-    margin-top: 10px;
-    list-style-type: none;
     display: flex;
+    float: right;
+    width: 55vw;
+    margin-top: 10px;
+    margin-right:50px;
+    list-style-type: none;
     justify-content: space-between;
-    font-size: 3.5rem;
     font-family: "Futura Display BQ", sans-serif;
-    -webkit-text-stroke: 0.7px white;
+    font-size: 3.5rem;
     letter-spacing: 2px;
+    -webkit-text-stroke: 0.7px white;
 }
 
 .nav_links li {
-
     overflow: hidden;
-    transition: color 0.8s ease;
-    background: linear-gradient(to right, rgb(23, 21, 143) 50%, transparent 50%);
-    background-size: 200% 100%;
+    background: linear-gradient(to right, var(--blue) 50%, transparent 50%);
     background-position: right bottom;
-    transition: 0.43s ease-out, opacity 0.8s ease;
+    background-size: 200% 100%;
+    transition: 300ms ease-out, opacity 8s ease;
+    cursor: pointer;
 }
 
 .nav_links li:hover {
-    background-position: left bottom;
     color: white;
+    background-position: left bottom;
     opacity: 0.897;
     -webkit-text-stroke: 0.7px black;
 }
 
 .nav_ua_letter{
     font-family: "UA Cadet", sans-serif;
-    font-size: 3.04rem;
-    
+    font-size: 3.04rem; 
 }
 
 .hero {
-    height: 100vh;
     position: relative;
+    height: 100vh;
 }
 
 .card {
-    margin: 0;
     position: absolute;
     top: 20%;
-    margin-left: 5%;
+    margin: 0;
     max-width: 800px;
     max-height: 600px;
+    padding: 3rem;
+    margin-left: 5%;
+    background-color: rgba(112, 128, 144, 0.349);
     border: 3px solid rgb(55, 95, 134);
     border-radius: 4px;
-    padding: 3rem;
-    background-color: rgba(112, 128, 144, 0.349);
     box-shadow: 4px 4px 5px rgb(64, 67, 70);
-
 }
 
 .card_title {
-    font-size: 5.5rem;
-    text-transform: uppercase;
+    padding: 10px;
     font-family: "Futura Display BQ", sans-serif;
+    font-size: 5.5rem;
     letter-spacing: 3px;
     color: white;
+    text-transform: uppercase;
     background: red;
-    padding: 10px;
-
 }
 
 .ua_letter {
@@ -270,10 +262,10 @@ html {
 
 .card_text {
     margin-top: 15px;
-    font-size: 2.8rem;
     margin-bottom: 15px;
     font-family: "MS Gothic", sans-serif;
-    color: rgb(255, 255, 255);
+    font-size: 2.8rem;
+    color: white;
 }
 
 }
