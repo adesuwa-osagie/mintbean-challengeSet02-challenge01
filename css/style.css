@@ -201,8 +201,6 @@ html {
     font-family: "Futura Display BQ", sans-serif;
     font-size: 3.5rem;
     letter-spacing: 2px;
-    -webkit-text-stroke: 0.7px white;
-    color: black;
 }
 
 /* Background Slider Effect; Resource: Tech Memorise: https://www.youtube.com/watch?v=WD41t8L52H8 */
@@ -211,6 +209,7 @@ html {
     position: relative;
     text-decoration: none;
     color: black;
+    -webkit-text-stroke: 0.7px white;
     background-color: transparent;
     transition: 400ms ease-in-out;
     cursor: pointer;
