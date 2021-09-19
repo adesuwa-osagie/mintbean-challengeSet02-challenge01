@@ -26,7 +26,7 @@ html {
     -o-background-size: cover;
     background-position: center;
     background-size: cover;
-    /* animation: fade-background 5s; */
+    animation: fade-background 5s;
 }
 
 @keyframes fade-background {
@@ -202,22 +202,46 @@ html {
     font-size: 3.5rem;
     letter-spacing: 2px;
     -webkit-text-stroke: 0.7px white;
+    color: black;
 }
 
-.nav_links li {
-    overflow: hidden;
-    background: linear-gradient(to right, var(--blue) 50%, transparent 50%);
-    background-position: right bottom;
-    background-size: 200% 100%;
-    transition: 300ms ease-out, opacity 8s ease;
+/* Background Slider Effect; Resource: Tech Memorise: https://www.youtube.com/watch?v=WD41t8L52H8 */
+
+.nav_link {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+    transition: 400ms ease-in-out;
     cursor: pointer;
 }
 
-.nav_links li:hover {
+.nav_link:hover {
     color: white;
-    background-position: left bottom;
-    opacity: 0.897;
-    -webkit-text-stroke: 0.7px black;
+}
+
+.nav_link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--blue);
+    transition: 0.4s ease-in-out;
+}
+
+.slide::before {
+    left: unset;
+    right: 0;
+    width: 0;
+}
+
+.slide:hover::before {
+    right: unset;
+    left: 0;
+    width: 100%;
 }
 
 .nav_ua_letter{
